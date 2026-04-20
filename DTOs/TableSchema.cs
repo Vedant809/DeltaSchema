@@ -20,6 +20,13 @@
         public int? CHARACTER_MAXIMUM_LENGTH { get; set; }
     }
 
+    public class SchemaDiff
+    {
+        public List<Schema>? TableMissing { get; set; }
+        public List<Schema>? ColumnMissing { get; set; }
+        public List<Schema>? DataTypeMismatch { get; set; }
+
+    }
     public class TableInfo
     {
         public string TABLE_SCHEMA { get; set; }
@@ -29,6 +36,13 @@
     {
         public string? Name { get; set; }
         public string? DataType { get; set; }
+    }
+
+    public class CombinedConnectionDetails
+    {
+        public ConnectionDetails? Source { get; set; }
+        public ConnectionDetails? Target { get; set; }
+
     }
     public class ConnectionDetails
     {

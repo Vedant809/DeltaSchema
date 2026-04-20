@@ -15,7 +15,7 @@ namespace DeltaSchema.Controllers
             _service = service;
         }
         [HttpPost("ExtractTableMetadata")]
-        public List<Schema> ExtractTableMetadata(ConnectionDetails request)
+        public SchemaDiff ExtractTableMetadata(CombinedConnectionDetails request)
         {
             return _service.ExtractTableMetadata(request);
         }
